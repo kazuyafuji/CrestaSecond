@@ -4,7 +4,93 @@
       <meta charset="UTF-8" />
       <meta name="robots" content="noindex, nofollow" />
       <title>cresta_second(無料のコーディング課題)</title>
+      <link rel="stylesheet" href="css/destyle.css" />
+      <link
+      href=“https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP&display=swap”
+      rel=“stylesheet”>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+      />
       <link rel="stylesheet" href="css/style.css" />
     </head>
-    <body></body></html
+    <body>
+      <header>
+        <div class="header-container">
+          <div class="header-logo"><p>Cresta Design</p></div>
+          <nav class="header-nav">
+            <ul>
+              <li class="nav-item"><a href="#concept">Concept</a></li>
+              <li class="nav-item"><a href="#service">Service</a></li>
+              <li class="nav-item"><a href="#works">Works</a></li>
+              <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="header-humberger">
+            <div class="header-humberger-area">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="humberger-modal">
+            <ul class="humberger-nav-list">
+              <li class="humberger-nav-item">
+                <a href="#concept" id="humberger-nav-item-link">Concept</a>
+              </li>
+              <li class="humberger-nav-item">
+                <a href="#service" id="humberger-nav-item-link">Service</a>
+              </li>
+              <li class="humberger-nav-item">
+                <a href="#works" id="humberger-nav-item-link">Works</a>
+              </li>
+              <li class="humberger-nav-item">
+                <a href="#contact" id="humberger-nav-item-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <section class="first-view">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="/docs/img/fv-bgi_01@2x.jpg" alt="slide01" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/docs/img/fv-bgi_02@2x.jpg" alt="slide02" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/docs/img/fv-bgi_03@2x.jpg" alt="slide03" />
+            </div>
+          </div>
+        </div>
+        <div class="fv-heading">
+          <p class="fv-heading-main">Design for Smile.</p>
+          <p class="fv-heading-sub">快適なオフィスをデザインする</p>
+        </div>
+      </section>
+      <section class="concept" id="concept"></section>
+      <section class="works" id="service"></section>
+      <section class="service" id="works"></section>
+      <section class="contact" id="contact"></section>
+      <footer></footer>
+      <script
+        src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+        crossorigin="anonymous"
+      ></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+      <script>
+        /*Swiperの初期化*/
+        var swiper = new Swiper(".swiper", {
+          loop: true,
+          speed: 1200,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: true,
+          },
+          centeredSlides: true,
+        });
+      </script>
+      <script src="/docs/js/main.js"></script>
+    </body></html
 ></DOCTYPE!>
