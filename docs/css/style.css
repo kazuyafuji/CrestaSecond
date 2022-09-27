@@ -11,17 +11,18 @@ body {
 /*--------------------------
     HEADER
 ----------------------------*/
-header {
+.header {
   height: 96px;
-  display: fixed;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 10;
   color: #fff;
   font-style: italic;
-  position: relative;
 }
-/*scrollTopがga752をすぎるとこのクラスを付加*/
-.header-background {
+/*scrollTopが752-96=656 をすぎるとこのクラスを付加*/
+.header-bg-dark {
   background-color: #282f35;
 }
 .header-container {
@@ -59,7 +60,6 @@ header {
 .first-view {
   width: 100%;
   position: relative;
-  margin-top: -96px;
 }
 .fv-heading {
   position: absolute;
@@ -75,6 +75,13 @@ header {
 }
 .fv-heading-sub {
   font-size: 4rem;
+}
+
+/*--------------------------
+    CONCEPT
+----------------------------*/
+.concept {
+  height: 2000px;
 }
 
 /*--------------------------
@@ -185,7 +192,7 @@ header {
   }
   .first-view {
     background: url("/docs/img/fv-bgi_01@2x.jpg") no-repeat;
-    background-position: bottom;
+    background-position: center;
     background-size: cover;
     height: 600px;
   }
