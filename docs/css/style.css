@@ -1,13 +1,37 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 html {
   font-size: 62.5%;
   font-family: "Noto Serif JP", "Noto Serif", メイリオ, sans-serif;
+  font-weight: bold;
 }
+/*--------------------------
+    iPhoneで見るとgithub pageではfontが適用されていない原因調べるところから！
+----------------------------*/
 body {
   background-color: #fff;
   letter-spacing: 2px;
 }
-
+.section-title {
+  font-size: 6rem;
+  font-style: italic;
+  color: #333;
+}
+.section-title:after {
+  content: "";
+  display: inline-block;
+  width: 200px;
+  height: 5px;
+  background-color: #333;
+  vertical-align: middle;
+  transform: translateY(-100%);
+  margin-left: 30px;
+}
+.section-title-our {
+  color: #171717;
+  opacity: 5%;
+  font-size: 9rem;
+}
 /*--------------------------
     HEADER
 ----------------------------*/
@@ -45,8 +69,8 @@ body {
   font-size: 1.6rem;
 }
 .header-nav .nav-item {
-  width: 100px;
-  text-align: right;
+  display: inline-block;
+  margin-left: 30px;
 }
 .header-humberger {
   display: none;
@@ -81,13 +105,61 @@ body {
     CONCEPT
 ----------------------------*/
 .concept {
-  height: 2000px;
+  width: 100%;
+}
+.concept-container {
+  margin: 85px 120px 70px;
+}
+.concept .section-title {
+  margin-left: 100px;
+}
+.concept-sub-title {
+  display: block;
+  margin: 70px auto 0;
+  text-align: center;
+  font-size: 3rem;
+}
+.concept-content-wrapper {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+}
+.concept-content-text {
+  width: 440px;
+  margin-left: 100px;
+  text-align: left;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1.9;
+}
+.concept-content-image-box {
+  margin-left: 120px;
+  width: 440px;
+  height: 240px;
+}
+.concept-content-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.concept .section-title-our {
+  margin-top: 90px;
+  text-align: right;
 }
 
 /*--------------------------
     MEDIA SCREEN
 ----------------------------*/
-@media (max-width: 768px) {
+@media (max-width: 520px) {
+  .section-title {
+    font-size: 3rem;
+  }
+  .section-title:after {
+    width: 90px;
+  }
+  .section-title-our {
+    font-size: 4rem;
+  }
   /*--------------------------
         HEADER
     ----------------------------*/
@@ -208,5 +280,35 @@ body {
   }
   .fv-heading-sub {
     font-size: 3rem;
+  }
+  /*--------------------------
+    CONCEPT
+  ----------------------------*/
+  .concept-container {
+    margin: 100px 15px 40px;
+  }
+  .concept .section-title {
+    margin-left: 0;
+  }
+  .concept-sub-title {
+    font-size: 2rem;
+  }
+  .concept-content-wrapper {
+    display: block;
+    margin-top: 45px;
+    flex-direction: column;
+  }
+  .concept-content-text {
+    margin: 0;
+    font-size: 1.6rem;
+  }
+  .concept-content-image-box {
+    margin-left: 0;
+    margin: 30px auto 0;
+    width: 345px;
+    height: 150px;
+  }
+  .concept .section-title-our {
+    margin-top: 40px;
   }
 }
