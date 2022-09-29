@@ -148,6 +148,87 @@ body {
 }
 
 /*--------------------------
+    WORKS
+----------------------------*/
+.works {
+  width: 100%;
+  background-image: url(/docs/img/works-bgi@2x.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-top: 120px;
+  padding-bottom: 70px;
+}
+.works-container {
+  margin: 0 100px;
+}
+.works-container .section-title {
+  text-align: right;
+  color: #fff;
+}
+.works-container .section-title:after {
+  background-color: #fff;
+}
+.works-card-wrapper {
+  margin: 80px 100px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.works-card {
+  width: 320px;
+  height: 334px;
+  background-color: #fff;
+  box-shadow: 0 0 8px #1b1310;
+}
+.works-card-image-box {
+  width: 320px;
+  height: 200px;
+}
+.works-card-text-box {
+  display: flex;
+  width: 320px;
+  height: 134px;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+}
+.works-card-text {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: normal;
+}
+.works-button {
+  margin: 80px auto 0;
+  width: 235px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #f7d43f;
+  box-shadow: 0 0 8px #1b1310;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 3.75;
+}
+.works-button-area {
+  display: block;
+  border-radius: 30px;
+  height: 100%;
+  width: 100%;
+}
+.works-button:hover {
+  opacity: 0.8;
+}
+.works .section-title-our {
+  margin-top: 70px;
+  color: #fff;
+  opacity: 10%;
+}
+
+/*--------------------------
+    SERVICE
+----------------------------*/
+
+/*--------------------------
     MEDIA SCREEN
 ----------------------------*/
 @media (max-width: 520px) {
@@ -309,6 +390,31 @@ body {
     height: 150px;
   }
   .concept .section-title-our {
+    margin-top: 40px;
+  }
+
+  /*--------------------------
+    WORKS
+  ----------------------------*/
+  .works {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  .works-container {
+    margin: 0 15px;
+  }
+  .works-container .section-title {
+    margin: 0;
+  }
+  .works-card-wrapper {
+    margin: 0;
+    width: 320px;
+    margin: 20px auto 0;
+  }
+  .works-card {
+    margin-top: 30px;
+  }
+  .works .section-title-our {
     margin-top: 40px;
   }
 }
