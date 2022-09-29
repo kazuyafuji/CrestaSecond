@@ -21,13 +21,13 @@
     </head>
     <body>
       <header class="header">
-        <div class="header-container">
+        <div class="header-wrapper">
           <div class="header-logo"><p>Cresta Design</p></div>
           <nav class="header-nav">
             <ul>
               <li class="nav-item"><a href="#concept">Concept</a></li>
-              <li class="nav-item"><a href="#service">Service</a></li>
               <li class="nav-item"><a href="#works">Works</a></li>
+              <li class="nav-item"><a href="#service">Service</a></li>
               <li class="nav-item"><a href="#contact">Contact</a></li>
             </ul>
           </nav>
@@ -42,10 +42,10 @@
                 <a href="#concept" id="humberger-nav-item-link">Concept</a>
               </li>
               <li class="humberger-nav-item">
-                <a href="#service" id="humberger-nav-item-link">Service</a>
+                <a href="#works" id="humberger-nav-item-link">Works</a>
               </li>
               <li class="humberger-nav-item">
-                <a href="#works" id="humberger-nav-item-link">Works</a>
+                <a href="#service" id="humberger-nav-item-link">Service</a>
               </li>
               <li class="humberger-nav-item">
                 <a href="#contact" id="humberger-nav-item-link">Contact</a>
@@ -74,7 +74,7 @@
         </div>
       </section>
       <section class="concept" id="concept">
-        <div class="concept-container">
+        <div class="concept-wrapper">
           <div class="section-title">CONCEPT</div>
           <div class="concept-sub-title">
             <p>
@@ -98,9 +98,9 @@
         </div>
       </section>
       <section class="works" id="works">
-        <div class="works-container">
+        <div class="works-wrapper">
           <div class="section-title">Works</div>
-          <div class="works-card-wrapper">
+          <div class="works-card-container">
             <div class="works-card">
                 <div class="works-card-image-box"><img src="img/card-img01@2x.jpg" alt="card-img01"></div>
                 <div class="works-card-text-box"><p class="works-card-text">新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p></div>
@@ -119,9 +119,38 @@
         </div>
         </div>
       </section>
-      <section class="service" id="service"></section>
-      <section class="contact" id="contact"></section>
-      <footer></footer>
+      <section class="service" id="service">
+        <div class="service-wrapper">
+            <div class="section-title">Service</div>
+            <div class="service-card-wrapper">
+                <div class="service-card">
+                    <img class="service-image"  src="img/service-img01@2x.jpg" alt="service_img_01">
+                    <p class="service-text">Hearing</p>
+                </div>
+                <div class="service-card">
+                    <img class="service-image"  src="img/service-img02@2x.jpg" alt="service_img_02
+                    ">
+                    <p class="service-text">Planning</p>
+                </div>
+                <div class="service-card">
+                    <img class="service-image"  src="img/service-img03@2x.jpg" alt="service_img_03">
+                    <p class="service-text">Direction</p>
+                </div>
+            </div>
+            <div class="section-title-our">Our Service</div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="contact-wrapper">
+            <div class="section-title">Contact</div>
+            <p class="contact-text">お気軽にご相談ください。</p>
+            <div class="contact-button"><a class="contact-button-area" href="#">Contact</a></div>
+            <div class="section-title-our">Contact us</div>
+        </div>
+      </section>
+      <footer class="footer">
+        <p class="footer-text">©︎cresta.design all rights reserved</p>
+      </footer>
       <script
         src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
@@ -149,7 +178,7 @@
       ></script>
       <script>
         var scroll = new SmoothScroll('a[href*="#"]', {
-          speed: 100,
+          speed: 200,
           easing: "easeOutCubic",
         });
       </script>
