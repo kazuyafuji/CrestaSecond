@@ -1,0 +1,301 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+html {
+  font-size: 62.5%;
+  font-family: "Noto Serif JP", "Noto Serif", メイリオ, sans-serif;
+  font-weight: bold;
+}
+body {
+  background-color: #fff;
+  letter-spacing: 2px;
+}
+
+/*--------------------------
+    HEADER
+----------------------------*/
+.header {
+  height: 96px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  color: #fff;
+  font-style: italic;
+}
+/*scrollTopが752-96=656 をすぎるとこのクラスを付加*/
+.header-bg-dark {
+  background-color: #282f35;
+}
+.header-wrapper {
+  display: flex;
+  margin: auto 120px;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.header-logo {
+  font-size: 2.6rem;
+}
+.header-nav ul {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.6rem;
+}
+.header-nav .nav-item {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+/*--------------------------
+    FIRST VIEW
+----------------------------*/
+.first-view {
+  width: 100%;
+  height: 453px;
+  background: url(../img/contact-page-bgi@2x.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 96px;
+}
+.first-view-area {
+  display: block;
+  padding-top: 90px;
+  width: 100%;
+  height: 357px;
+}
+.contact-title {
+  font-size: 6rem;
+  color: #fff;
+  font-style: italic;
+  text-align: center;
+}
+.section-title-our {
+  margin-left: 48px;
+  color: #fff;
+  opacity: 5%;
+  font-size: 9rem;
+}
+.header-humberger {
+  display: none;
+}
+.humberger-modal {
+  display: none;
+}
+
+/*--------------------------
+    CONTACT
+----------------------------*/
+.contact {
+  width: 100%;
+  background-color: #fff;
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+.contact-form {
+  margin: 0 auto;
+  width: 700px;
+}
+.contact-form-container {
+  width: 100%;
+  margin-bottom: 25px;
+}
+.contact-form-container .heading {
+  font-size: 1.6rem;
+}
+.type-list {
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+}
+.type-item {
+  margin-right: 20px;
+  font-size: 1.6rem;
+  font-family: "Noto Serif JP";
+  font-weight: normal;
+}
+.contact-form-container input[type="text"] {
+  border: 1px solid #333;
+  display: block;
+  margin-top: 5px;
+  width: 100%;
+  height: 30px;
+}
+.contact-form-container textarea {
+  width: 100%;
+  height: 171px;
+  border: 1px solid #333;
+  margin-top: 5px;
+}
+.contact-form input[type="submit"] {
+  display: block;
+  margin: 80px auto 0;
+  width: 235px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #f7d43f;
+  box-shadow: 0 0 8px #1b1310;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 3.75;
+}
+.contact-form input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+/*--------------------------
+    FOOTER
+----------------------------*/
+.footer {
+  background-color: #fff;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-text {
+  font-size: 1.4rem;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+/*--------------------------
+    MEDIA SCREEN
+----------------------------*/
+@media (max-width: 520px) {
+  /*--------------------------
+        HEADER
+    ----------------------------*/
+  .header-wrapper {
+    margin: auto 15px;
+  }
+  .header-nav {
+    display: none;
+  }
+  .header-humberger {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    position: relative;
+  }
+  .header-humberger-area {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 150;
+  }
+  .header-humberger-area a {
+    width: 100%;
+    height: 100%;
+  }
+  .header-humberger-area span {
+    display: inline-block;
+    transition: all 0.4s;
+    position: absolute;
+    left: 0px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 100%;
+  }
+  .header-humberger-area span:nth-of-type(1) {
+    top: 0;
+  }
+  .header-humberger-area span:nth-of-type(2) {
+    top: 8.5px;
+  }
+  .header-humberger-area span:nth-of-type(3) {
+    bottom: 0;
+  }
+  .header-humberger.active span:nth-of-type(1) {
+    top: 3px;
+    left: 3px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 20px;
+  }
+  .header-humberger.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .header-humberger.active span:nth-of-type(3) {
+    top: 15px;
+    left: 3px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 20px;
+  }
+  .humberger-modal {
+    display: none;
+  }
+  .humberger-modal.active {
+    display: flex;
+    background-color: #282f35;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    animation: appear 0.3s ease-in-out;
+  }
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .humberger-nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .humberger-nav-item a {
+    font-size: 1.6rem;
+    color: #fff;
+    text-align: center;
+    line-height: 3;
+  }
+  /*--------------------------
+    FIRST VIEW
+  ----------------------------*/
+  .first-view {
+    padding-top: 96px;
+    height: 360px;
+  }
+  .first-view-area {
+    padding-top: 80px;
+    display: block;
+    width: 100%;
+    height: 264px;
+  }
+  .contact-title {
+    font-size: 3rem;
+  }
+  .section-title-our {
+    font-size: 4rem;
+    margin-top: 40px;
+  }
+  /*--------------------------
+    CONTACT
+  ----------------------------*/
+  .contact-form {
+    margin: 0 15px;
+    width: auto;
+  }
+  .type-list {
+    flex-direction: column;
+  }
+  .type-item {
+    margin: 0;
+    margin-top: 10px;
+  }
+}
