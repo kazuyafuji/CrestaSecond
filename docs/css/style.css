@@ -493,8 +493,9 @@ body {
     flex-direction: column;
   }
   .concept-content-text {
+    width: 100%;
+    text-align: center;
     margin: 0;
-    font-size: 1.6rem;
   }
   .concept-content-image-box {
     margin-left: 0;
